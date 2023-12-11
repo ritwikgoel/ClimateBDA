@@ -1,0 +1,79 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EECS6893 project</title>
+    <style>
+        body {
+            background-image: url('/static/bg3.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Palatino', 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: top;
+            color: white;
+        }
+        
+        h2 {
+            margin: 290px;
+            font-family: 'Palatino', 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
+            display: flex;
+            flex-direction: column;
+            height: 10vh;
+            align-items: center;
+            justify-content: right;
+            color: white;
+        }
+
+        button {
+            background-color: rgb(241, 204, 17);
+            color: rgb(4, 5, 69);
+            border: none;
+            padding: 4px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: rgb(25, 182, 14);
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <h1>NW France Weather Data Prediction</h1>
+    <form action="/fetch_images" method="post">
+        <label for="datepicker">Select Date: </label>
+        <input type="date" id="datepicker" name="datepicker">
+        <button type="submit">Predict</button>
+    </form>
+
+    <nav class="container">
+        <div class="row align-items-right py-2">
+            <div class="input-group col-sm">
+                <span class="input-group-text" id="basic-addon1">Lat</span>
+                <input type="text" class="form-control" inputmode="numeric" id="latitude" placeholder="latitude" aria-label="latitude" aria-describedby="basic-addon1" value="47.00"/>
+            </div>
+            <div class="input-group col-sm">
+                <span class="input-group-text" id="basic-addon1">Long</span>
+                <input type="text" class="form-control" inputmode="numeric" id="longitude" placeholder="longitude" aria-label="longitude" aria-describedby="basic-addon1" value="-7.00"/>
+            </div>
+        </div>
+    </nav>
+    
+
+    <h2>A project by Apurva Patel and Ritwik Goel</h2>
+
+</body>
+</html>
