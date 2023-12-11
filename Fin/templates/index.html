@@ -20,7 +20,16 @@
             justify-content: top;
             color: white;
         }
-        
+        /* Transparent background for datepicker and input fields */
+form input[type="date"], .input-group input {
+    background-color: white; /* Set the background color to white */
+    color: black; /* Set the text color to black */
+    border: 1px solid white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
         h2 {
             margin: 290px;
             font-family: 'Palatino', 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif;
@@ -31,49 +40,98 @@
             justify-content: right;
             color: white;
         }
-
         button {
-            background-color: rgb(241, 204, 17);
-            color: rgb(4, 5, 69);
-            border: none;
-            padding: 4px 15px;
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+            padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
             border-radius: 5px;
             margin-top: 10px;
+            margin-right: 10px;
+            transition: background-color 0.3s ease; /* Add a transition for smooth color change */
+}
+
+button:hover {
+    background-color: grey; /* Change to grey on hover */
+}
+
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(3px) translateX(0);
+    }
+    50% {
+        transform: translateY(-10px) translateX(5px);
+    }
+}
+
+        h1 {
+            font-style: oblique;
+            opacity: 0.8;
+            animation: bounce 5s infinite;
         }
 
-        button:hover {
-            background-color: rgb(25, 182, 14);
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .row {
+            margin-bottom: 10px;
+        }
+
+        .input-group {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        /* Transparent background for datepicker and input fields */
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form input[type="date"], .input-group input {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
         }
 
     </style>
-
-
 </head>
 <body>
-    <h1>NW France Weather Data Prediction</h1>
-    <form action="/fetch_images" method="post">
-        <label for="datepicker">Select Date: </label>
-        <input type="date" id="datepicker" name="datepicker">
-        <button type="submit">Predict</button>
-    </form>
+    <h1 style="font-style:oblique; opacity: 0.8; ">NW France Weather Data Prediction</h1>
 
     <nav class="container">
+        <form action="/fetch_images" method="post" id="form43">
+            <label for="datepicker">Select Date: </label>
+            <input type="date" id="datepicker" name="datepicker">
+           
+        </form>
+
         <div class="row align-items-right py-2">
             <div class="input-group col-sm">
-                <span class="input-group-text" id="basic-addon1">Lat</span>
+                <label for="latitude">Latitude : </label><br>
+
                 <input type="text" class="form-control" inputmode="numeric" id="latitude" placeholder="latitude" aria-label="latitude" aria-describedby="basic-addon1" value="47.00"/>
             </div>
             <div class="input-group col-sm">
-                <span class="input-group-text" id="basic-addon1">Long</span>
+                <label for="longitude">Longitude : </label><br>
                 <input type="text" class="form-control" inputmode="numeric" id="longitude" placeholder="longitude" aria-label="longitude" aria-describedby="basic-addon1" value="-7.00"/>
             </div>
         </div>
+        <button type="submit" form="form43">Predict</button>
     </nav>
-    
 
-    <h2>A project by Apurva Patel and Ritwik Goel</h2>
+    <h2  style="font-style:oblique; opacity: 0.8; ">A project by Apurva Patel and Ritwik Goel</h2>
 
 </body>
 </html>

@@ -1,1 +1,1 @@
-{"date": 1702357200.0, "temperature": 14.17, "feels_like": 13.99, "description": "overcast clouds", "humidity": 90, "wind_speed": 10.01, "wind_gust": 14.91, "wind_deg": 251, "dew_point": 12.56, "pressure": 1010, "clouds": 100}
+{"date": 1702357200.0, "temperature": 14.11, "feels_like": 13.95, "description": "overcast clouds", "humidity": 91, "wind_speed": 9.29, "wind_gust": 14.3, "wind_deg": 245, "dew_point": 12.66, "pressure": 1010, "clouds": 100}
